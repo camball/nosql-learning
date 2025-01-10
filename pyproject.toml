@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nosql"
+version = "0.1.0"
+description = "Example usage of NoSQL databases."
+authors = ["camball <67163069+camball@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pymongo = "^4.10.1"
+redis = "^5.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mongo = "nosql.mongo_example:main"
+redis = "nosql.redis_example:main"
