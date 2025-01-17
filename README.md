@@ -65,3 +65,24 @@ Live-coded for the Clean Coders software engineering book club for a hands-on de
     ```sh
     poetry run redis
     ```
+
+## Dgraph
+
+1. Ensure the [Docker Desktop](https://www.docker.com/products/docker-desktop/) app is open on your machine (install with `brew install --cask docker` if needed)
+2. Pull Dgraph image (per Dgraph's [instructions](https://github.com/hypermodeinc/dgraph#install-with-docker))
+
+    ```sh
+    docker pull dgraph/dgraph:latest
+    ```
+
+3. Run a standalone Dgraph cluster
+
+    ```sh
+    docker run -it -p 8080:8080 -p 9080:9080 -v ~/dgraph:/dgraph dgraph/standalone:latest
+    ```
+
+4. Add some graph nodes and query for them via GraphQL
+
+    ```sh
+    poetry run dgraph
+    ```

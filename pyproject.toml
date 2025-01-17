@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.13"
 pymongo = "^4.10.1"
 redis = "^5.2.1"
+pydgraph = "^24.1.0"
 
 
 [build-system]
@@ -18,3 +19,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 mongo = "nosql.mongo_example:main"
 redis = "nosql.redis_example:main"
+dgraph = "nosql.dgraph_example:main"
