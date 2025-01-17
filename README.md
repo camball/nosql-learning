@@ -66,7 +66,7 @@ Live-coded for the Clean Coders software engineering book club for a hands-on de
     poetry run redis
     ```
 
-## Dgraph
+## Dgraph (Graph Database)
 
 1. Ensure the [Docker Desktop](https://www.docker.com/products/docker-desktop/) app is open on your machine (install with `brew install --cask docker` if needed)
 2. Pull Dgraph image (per Dgraph's [instructions](https://github.com/hypermodeinc/dgraph#install-with-docker))
@@ -86,3 +86,12 @@ Live-coded for the Clean Coders software engineering book club for a hands-on de
     ```sh
     poetry run dgraph
     ```
+
+```mermaid
+graph TD
+    A(name: Alice) -->|follows| B(name: Bob)
+    B -->|follows| C(name: Charlie)
+    C -->|follows| A
+    A -->|follows| C
+    D(name: David) -->|blocks| C
+```
